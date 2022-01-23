@@ -1,0 +1,80 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.container { 
+    max-width: 1300px;
+    margin: 0 auto;
+    /* padding: 0 40px; */
+    overflow: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: 1px;
+}
+
+
+/*Margin*/
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 1.5rem 0;
+}
+
+.my-3 {
+    margin: 2rem 0;
+}
+
+.my-4 {
+    margin: 3rem 0;
+}
+
+.my-5 {
+    margin: 4rem 0;
+}
+
+/* Padding */
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 1.5rem 0;
+}
+
+.py-3 {
+    padding: 2rem 0;
+}
+
+.py-4 { 
+    padding: 3rem 0;
+}
+
+.py-5 {
+    padding: 4rem 0;
+}
+
