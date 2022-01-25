@@ -12,6 +12,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    background: whitesmoke;
 }
 
 ul {
@@ -20,6 +21,10 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+.text-header {
+    text-align: center;
 }
 
 /* left panel */
@@ -210,6 +215,7 @@ a {
     left: 300px;
     width: calc(100% - 300px);
     transition: all 0.5s;
+    margin: 2rem 0;
 }
 
 .leftpanel-mobile.active ~ .main{
@@ -217,6 +223,72 @@ a {
     left: 50px;
     width: calc(100% - 50px);
 }
+
+/* stats */
+.stats {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin: 2rem 0;
+    gap: 30px;
+    background: white;
+    padding: 4rem;
+    border-radius: 30px;
+    /* border: 1px solid var(--purple); */
+    box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
+}
+
+.stats .card:nth-child(1) {
+    border: 1px solid rgba(0,179,0,1);
+    background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(161,255,0,1) 100%);
+    justify-self: right;
+}
+
+.stats .card:nth-child(2) {
+    border: 1px solid rgba(255,0,0,1);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(115, 20, 20,1) 100%);
+    justify-self: left;
+}
+
+.stats .card:nth-child(3) {
+    border: 1px solid rgba(255,191,0,1);
+    background: linear-gradient(90deg, rgba(255,191,0,1) 0%, rgba(255,229,0,1) 100%);
+    justify-self: right;
+}
+
+.stats .card:nth-child(4) {
+    border: 1px solid rgba(112,112,112,1);
+    background: linear-gradient(90deg, rgba(112,112,112,1) 0%, rgba(186,186,186,1) 100%);
+    justify-self: left;
+}
+
+.stats .card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.stats .card p {
+    font-size: 25px;
+}
+
+.stats .card-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats .card-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 
