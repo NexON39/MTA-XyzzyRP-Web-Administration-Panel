@@ -12,7 +12,6 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: whitesmoke;
 }
 
 ul {
@@ -241,25 +240,21 @@ a {
 }
 
 .stats .card:nth-child(1) {
-    border: 1px solid rgba(0,179,0,1);
     background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(161,255,0,1) 100%);
     justify-self: right;
 }
 
 .stats .card:nth-child(2) {
-    border: 1px solid rgba(255,0,0,1);
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(115, 20, 20,1) 100%);
+    background: linear-gradient(90deg, rgba(255,66,66,1) 0%, rgba(255, 74, 74,1) 100%);
     justify-self: left;
 }
 
 .stats .card:nth-child(3) {
-    border: 1px solid rgba(255,191,0,1);
     background: linear-gradient(90deg, rgba(255,191,0,1) 0%, rgba(255,229,0,1) 100%);
     justify-self: right;
 }
 
 .stats .card:nth-child(4) {
-    border: 1px solid rgba(112,112,112,1);
     background: linear-gradient(90deg, rgba(112,112,112,1) 0%, rgba(186,186,186,1) 100%);
     justify-self: left;
 }
@@ -270,6 +265,8 @@ a {
     align-items: center;
     height: 80px;
     width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
 }
 
 .stats .card p {
@@ -286,6 +283,18 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* chart */
+.chart {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
+    padding: 20px;
 }
 
 
