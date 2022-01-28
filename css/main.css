@@ -222,6 +222,10 @@ a {
     animation: 500ms ease 0s 1 slideInFromTop;
 }
 
+.main.modalactive {
+    opacity: 0.25;
+}
+
 .leftpanel-mobile.active ~ .main{
     /* position: absolute;
     left: 50px;
@@ -338,35 +342,45 @@ a {
 
 /* inputs */
 .inputs {
-    display: grid;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 2rem 0;
     background: white;
     padding: 4rem;
-    width: 100%;
     border-radius: 30px;
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
+    gap: 20px;
 }
 
 .inputs form {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     margin: auto;
     text-align: center;
     border: 1px grey solid;
     border-radius: 20px;
     padding: 20px;
+    width: 100%;
     transition: border 500ms;
+    background: white;
+    z-index: 99;
+}
+
+.inputs .inputs_type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inputs input[type='text'],
 .inputs input[type='password'] {
     border: none;
     border-bottom: 2px grey solid;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     margin: 0.5rem;
     padding: 10px;
@@ -387,10 +401,11 @@ a {
     background: white;
 }
 
-.inputs input[type='submit'] {
-    font-size: 1rem;
+.inputs input[type='submit'],
+.inputs button {
+    font-size: 1.1rem;
     margin: 1rem;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     border: none;
     letter-spacing: 1px;
     border: 1px solid var(--red);
@@ -400,7 +415,8 @@ a {
     text-align: center;
 }
 
-.inputs input[type='submit']:hover {
+.inputs input[type='submit']:hover,
+.inputs button:hover {
     transform: scale(1.05);
     transition: transform 200ms;
     border: 1px solid var(--red);
@@ -412,8 +428,55 @@ a {
     transition: border 500ms;
 }
 
-.inputs.panelusers {
+/* serverusers */
+.inputs.serverusers {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
     grid-template-columns: repeat(2,1fr);
+    flex-direction: unset;
+    line-height: 1.5rem;
+}
+
+.inputs.serverusers table {
+    grid-column: 1 / span 2;
+    text-align: center;
+    width: 100%;
+}
+
+.inputs.serverusers table h2{
+    text-align: center;
+}
+
+/* .inputs.serverusers.table {
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+} */
+
+.inputs .playerstats h2 {
+    text-align: center;
+}
+
+.inputs .playerstats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputs .playerstats,
+.inputs.serverusers table {
+    border: 1px grey solid;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    transition: border 500ms;
+    background: white;
+}
+
+.inputs .playerstats:hover,
+.inputs.serverusers table:hover {
+    transition: border 500ms;
+    border: 1px solid var(--red);
 }
 
 /* about */
@@ -490,10 +553,3 @@ a {
     font-size: 20px;
     text-align: center;
 }
-
-
-
-
-
-
-

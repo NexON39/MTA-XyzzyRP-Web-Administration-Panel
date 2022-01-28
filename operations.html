@@ -77,10 +77,56 @@
                 <h1>Operacje na użytkownikach</h1>
             </div>
             <!-- input -->
-            <div class="inputs">
+            <div class="inputs operations">
                 <form action="" method="post">
-                    <div><input type="text" placeholder="UID"></div>
-                    <div><input type="submit" value="Sprawdź"></div>
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="ban_uid"></div>
+                        <div><input type="text" placeholder="Czas" name="ban_time"></div>
+                        <div><input type="text" placeholder="(m/h/d)" name="ban_unit"></div>
+                        <div><input type="text" placeholder="Powód" name="ban_reason"></div>   
+                    </div>
+                    <div><input type="submit" value="Ban"></div>
+                </form>
+                <form action="" method="post">
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="kick_uid"></div>
+                        <div><input type="text" placeholder="Powód" name="kick_reason"></div>
+                    </div>
+                    <div><input type="submit" value="Kick"></div>
+                </form>
+                <form action="" method="post">
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="aj_uid"></div>
+                        <div><input type="text" placeholder="Czas(m)" name="aj_time"></div>
+                        <div><input type="text" placeholder="Powód" name="reason_reason"></div>
+                    </div>
+                    <div><input type="submit" value="Jail"></div>
+                </form>
+                <form action="" method="post">
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="booc_uid"></div>
+                        <div><input type="text" placeholder="Czas" name="ooc_time"></div>
+                        <div><input type="text" placeholder="(m/h/d)" name="ooc_unit"></div>
+                        <div><input type="text" placeholder="Powód" name="ooc_reason"></div>
+                    </div>
+                    <div><input type="submit" value="Blokada OOC"></div>
+                </form>
+                <form action="" method="post">
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="gp_uid"></div>
+                        <div><input type="text" placeholder="Powód" name="gp_reason"></div>
+                        <div><input type="text" placeholder="Ilość" name="gp_count"></div>
+                    </div>
+                    <div><input type="submit" value="Dodawanie GP"></div>
+                </form>
+                <form action="" method="post">
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="bpm_uid"></div>
+                        <div><input type="text" placeholder="Czas" name="bpm_time"></div>
+                        <div><input type="text" placeholder="(m/h/d)" name="bpm_unit"></div>
+                        <div><input type="text" placeholder="Powód" name="bpm_reason"></div>
+                    </div>
+                    <div><input type="submit" value="Blokada PM"></div>
                 </form>
             </div>
         </div>
