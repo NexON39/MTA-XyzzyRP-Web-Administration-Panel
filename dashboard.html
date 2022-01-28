@@ -19,18 +19,12 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="#"><i class="fas fa-server"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-ban"></i></i></a></li>
-                <li><a href="#"><i class="fas fa-gavel"></i></a></li>
-                <li><a href="#"><i class="fas fa-comment-slash"></i></a></li>
-                <li><a href="#"><i class="fas fa-skull-crossbones"></i></a></li>
-                <li><a href="#"><i class="fas fa-car"></i></a></li>
+                <li><a href="dashboard.html"><i class="fas fa-server"></i></a></li>
+                <li><a href="serverusers.html"><i class="fas fa-search"></i></a></li>
+                <li><a href="operations.html"><i class="fas fa-ban"></i></i></a></li>
                 <li><a href="#"><i class="fa fa-history"></i></a></li>
-                <li><a href="#"><i class="far fa-address-card"></i></a></li>
-                <li><a href="#"><i class="fas fa-user-plus"></i></a></li>
-                <li><a href="#"><i class="fas fa-user-minus"></i></a></li>
-                <li><a href="#"><i class="fas fa-info-circle"></i></a></li>
+                <li><a href="panelusers.html"><i class="fas fa-users"></i></a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i></a></li>
             </ul>
         </nav>
         <div class="userlog">
@@ -50,18 +44,21 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="#"><i class="fas fa-server"></i>Serwer</a></li>
-                <li><a href="#"><i class="fas fa-search"></i>Użytkownicy</a></li>
-                <li><a href="#"><i class="fas fa-ban"></i></i>Banowanie</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-server"></i>Serwer</a></li>
+                <li><a href="serverusers.html"><i class="fas fa-search"></i>Użytkownicy serwera</a></li>
+                <li><a href="operations.html"><i class="fas fa-ban"></i>Operacje</a></li>
+                <!-- <li><a href="#"><i class="fas fa-ban"></i></i>Banowanie</a></li>
                 <li><a href="#"><i class="fas fa-gavel"></i>Kickowanie</a></li>
                 <li><a href="#"><i class="fas fa-comment-slash"></i>Blokada czatu</a></li>
                 <li><a href="#"><i class="fas fa-skull-crossbones"></i>Admin jail</a></li>
                 <li><a href="#"><i class="fas fa-car"></i>Blokada jazdy</a></li>
-                <li><a href="#"><i class="fa fa-history"></i>Logi serwera</a></li>
-                <li><a href="#"><i class="far fa-address-card"></i>Logi panelu</a></li>
-                <li><a href="#"><i class="fas fa-user-plus"></i>Dodaj użytkownika</a></li>
-                <li><a href="#"><i class="fas fa-user-minus"></i>Usuń użytkownika</a></li>
-                <li><a href="#"><i class="fas fa-info-circle"></i>Informacje ogólne</a></li>
+                <li><a href="#"><i class="fas fa-car"></i>Nadaj gp</a></li> -->
+                <li><a href="#"><i class="fa fa-history"></i>Logi</a></li>
+                <!-- <li><a href="#"><i class="far fa-address-card"></i>Logi panelu</a></li> -->
+                <li><a href="panelusers.html"><i class="fas fa-users"></i></i>Użytkownicy panelu</a></li>
+                <!-- <li><a href="#"><i class="fas fa-user-plus"></i>Dodaj użytkownika</a></li>
+                <li><a href="#"><i class="fas fa-user-minus"></i>Usuń użytkownika</a></li> -->
+                <li><a href="about.html"><i class="fas fa-info-circle"></i>Informacje ogólne</a></li>
             </ul>
         </nav>
         <div class="userlog">
@@ -115,10 +112,49 @@
                 </div>     
             </div>
             <!-- chart -->
-            <div class="chart">
-                <canvas id="stats_chart"></canvas>
+                <div class="chart">
+                    <canvas id="stats_chart" class="stats_chart"></canvas>
+                </div>
+            <!-- stats-server -->
+            <div class="stats-server">
+                <div class="stats">
+                        <div class="card">
+                            <div class="card-left">
+                                <p>IP: </p>
+                            </div>
+                            <div class="card-right">
+                                <p>23.32.51.223</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-left">
+                                <p>Port: </p>
+                            </div>
+                            <div class="card-right">
+                                <p>25531</p>
+                            </div>
+                        </div>      
+                </div>    
             </div>
+                
         </div>
+        <!-- footer -->
+        <!-- <footer class="footer">
+            <div class="footer-text">
+                <p>kscode.pl</p>
+                <p>Copyright &copy; 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Serwer</a></li>
+                    <li><a href="#">Użytkownicy serwera</a></li>
+                    <li><a href="#">Operacje</a></li>
+                    <li><a href="#">Logi</a></li>
+                    <li><a href="#">Użytkownicy panelu</a></li>
+                    <li><a href="#">Informacje ogólne</a></li>
+                </ul>
+            </nav>
+        </footer> -->
     </div>
 
     <script src="js/aos.js"></script>
