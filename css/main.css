@@ -384,8 +384,7 @@ a {
     text-align: center;
     margin: 0.5rem;
     padding: 10px;
-    transition: border-bottom 500ms;
-    transition: background 500ms;
+    transition: background 500ms, border-bottom 500ms;
     background: whitesmoke;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -396,8 +395,7 @@ a {
 .inputs input[type='password']:focus {
     outline: none;
     border-bottom: 2px var(--red) solid;
-    transition: border-bottom 500ms;
-    transition: background 500ms;
+    transition: background 500ms, border-bottom 500ms;
     background: white;
 }
 
@@ -425,7 +423,7 @@ a {
 
 .inputs form:focus-within {
     border: 1px solid var(--purple);
-    transition: border 500ms;
+    transition: border 500ms, background 500ms;
 }
 
 /* serverusers */
@@ -442,16 +440,65 @@ a {
     grid-column: 1 / span 2;
     text-align: center;
     width: 100%;
+    display: grid;
 }
+
+.inputs.serverusers table tr {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs.serverusers table:nth-of-type(1) tr {
+    grid-template-columns: repeat(5,1fr);
+}
+
+.inputs.serverusers table:nth-of-type(2) tr,
+.inputs.serverusers table:nth-of-type(3) tr,
+.inputs.serverusers table:nth-of-type(4) tr {
+    grid-template-columns: repeat(3,1fr);
+}
+
+.inputs.serverusers table:nth-of-type(5) tr {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.inputs.serverusers table:nth-of-type(6) tr {
+    grid-template-columns: repeat(7,1fr);
+    padding-bottom: 20px;
+}
+
+.inputs.serverusers table:nth-of-type(6) tr:last-of-type {
+    grid-template-columns: repeat(7,1fr);
+    padding-bottom: 0;
+}
+
+.inputs.serverusers table:nth-of-type(6) tr th:nth-of-type(2),
+.inputs.serverusers table:nth-of-type(6) tr td:nth-of-type(2) {
+    grid-column: 2 / span 4;
+}
+
+/* logs table */
+
+.inputs.serverusers.logs table tr {
+    grid-template-columns: repeat(7,1fr);
+    padding-bottom: 20px;
+}
+
+.inputs.serverusers.logs table tr:last-of-type {
+    padding-bottom: 0;
+}
+
+.inputs.serverusers.logs table tr th:nth-of-type(3),
+.inputs.serverusers.logs table tr td:nth-of-type(3) {
+    grid-column: 3 / span 4;
+}
+
+/* logs table end */
 
 .inputs.serverusers table h2{
     text-align: center;
 }
-
-/* .inputs.serverusers.table {
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(1,1fr);
-} */
 
 .inputs .playerstats h2 {
     text-align: center;
@@ -468,7 +515,6 @@ a {
     border: 1px grey solid;
     border-radius: 20px;
     padding: 20px;
-    width: 100%;
     transition: border 500ms;
     background: white;
 }
