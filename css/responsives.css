@@ -6,6 +6,10 @@
 }
 
 @media(max-width: 1050px) {
+    .text-header h1 {
+        font-size: 20px;
+    }
+
     .stats {
         margin: 2rem 0;
         gap: 20px;

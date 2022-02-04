@@ -225,6 +225,10 @@ a {
     z-index: 80;
 }
 
+.loginpanel {
+    width: 100%;
+}
+
 .main.modalactive {
     opacity: 0.25;
 }
@@ -345,6 +349,18 @@ a {
 }
 
 /* inputs */
+.inputs.loginpanel {
+    position: fixed;
+    top: 50%;
+    margin: 0 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50%;
+    gap: 40px;
+    transition: all 0.5s;
+    animation: 500ms ease 0s 1 slideInFromTopLoginPanel;
+}
+
 .inputs {
     display: flex;
     align-items: center;

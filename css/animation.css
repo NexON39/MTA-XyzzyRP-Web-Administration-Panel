@@ -15,3 +15,12 @@
         transform: translateY(0);
     }
 }
+
+@keyframes slideInFromTopLoginPanel {
+    0% {
+        transform: translateY(-200%) translateX(-50%);
+    }
+    100% {
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
