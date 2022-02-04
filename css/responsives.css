@@ -1,0 +1,170 @@
+@media(max-width: 1300px) {
+    .inputs.operations input[type='text'],
+    .inputs.operations input[type='submit'] {
+        font-size: 0.75rem;
+    }
+}
+
+@media(max-width: 1050px) {
+    .stats {
+        margin: 2rem 0;
+        gap: 20px;
+        padding: 3rem;
+    }
+
+    .stats .card {
+        height: 60px;
+    }
+    
+    .stats .card p {
+        font-size: 15px;
+    }
+
+    .inputs input[type='text'],
+    .inputs input[type='password'] {
+        font-size: 1.0rem;
+    }
+
+    .inputs input[type='submit'],
+    .inputs button {
+        font-size: 1rem;
+        margin: 0.75rem;
+    }
+
+    .inputs .playerstats h2 {
+        font-size: 17px;
+    }
+
+    .inputs .playerstats .stat {
+        font-size: 12px;
+    }
+
+    table td {
+        font-size: 13px;
+    }
+
+    .inputs.operations input[type='text'],
+    .inputs.operations input[type='submit'] {
+        font-size: 0.60rem;
+    }
+
+    .inputs.operations {
+        padding: 3rem;
+    }
+}
+
+@media(max-width: 850px) {
+    .stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem 0;
+        gap: 20px;
+    }
+
+    .leftpanel {
+        width: 100%;
+    }
+
+    .inputs.serverusers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        grid-template-columns: none;
+        line-height: 1.5rem;
+    }
+
+    .inputs.operations form .inputs_type {
+        flex-direction: column;
+    }
+
+    .inputs.panelusers input[type='text'],
+    .inputs.panelusers input[type='submit'],
+    .inputs.panelusers input[type='password'] {
+        font-size: 0.75rem;
+    }
+}
+
+@media(max-width: 650px) {
+    .stats {
+        gap: 10px;
+        padding: 2rem;
+    }
+    
+    .stats .card p {
+        font-size: 14px;
+    }
+
+    table td {
+        font-size: 11px;
+    }
+
+    table th {
+        font-size: 12px;
+    }
+
+    .inputs {
+        padding: 2rem;
+    }
+
+    .inputs input[type='text'],
+    .inputs input[type='password'] {
+        font-size: 0.75rem;
+    }
+
+    .inputs input[type='submit'],
+    .inputs button {
+        font-size: 0.75rem;
+    }
+
+    .inputs.operations {
+        padding: 2rem;
+    }
+
+    .inputs.panelusers form .inputs_type {
+        flex-direction: column;
+    }
+}
+
+@media(max-height: 460px) {
+    .leftpanel .logo h1{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .leftpanel .logo i{
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .leftpanel .navbar {
+        font-size: 17px;
+    }
+
+    .leftpanel .userlog i{
+        color: white;
+        font-size: 17px;
+    }
+    
+    .leftpanel .userlog p{
+        color: white;
+        font-size: 17px;
+    }
+
+    .leftpanel-mobile .navbar {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .leftpanel-mobile .logo i{
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .leftpanel-mobile .userlog i{
+        color: white;
+        font-size: 16px;
+    }
+}
