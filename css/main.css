@@ -27,6 +27,34 @@ a {
     text-align: center;
 }
 
+.alertbox {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: var(--red);
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.6s;
+    animation: slideInFromBottom 0.5s;
+}
+
+.alertbox p {
+    font-size: 15px;
+}
+
+.alertbox .closebtn {
+    font-size: 20px;
+}
+
+.alertbox .closebtn:hover {
+    cursor: pointer;
+}
+
 /* left panel */
 
 .leftpanel.flex {
@@ -112,7 +140,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .leftpanel .userlog i{

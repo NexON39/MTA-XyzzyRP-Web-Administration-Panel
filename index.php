@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
+        header("Location: dashboard.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +27,30 @@
                 <div class="text-header">
                     <h1>XyzzyRP Administration Panel</h1>
                 </div>
-                <form action="" method="post">
-                    <div><input type="text" placeholder="Nick"></div>
-                    <div><input type="password" placeholder="Hasło"></div>
-                    <div><input type="submit" value="Zaloguj"></div>
+                <form action="src/login.php" method="post">
+                    <div><input type="text" placeholder="Nick" name="login"></div>
+                    <div><input type="password" placeholder="Hasło" name="pass"></div>
+                    <div><input type="submit" value="Zaloguj" name="login_btn"></div>
                 </form>
             </div>
 
+        </div>
+    </div>
+
+    <?php
+        if(isset($_SESSION['alert'])) {
+            echo $_SESSION['alert'];
+            unset($_SESSION['alert']);
+        }
+    ?>
+    <!-- <div class="alertbox">
+        <p>Błędne dane logowania</p>
+        <div class="closebtn">&times;</div>
+    </div> -->
+
     <script src="js/aos.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/alerts.js"></script>
+    <!-- <script src="js/app.js"></script> -->
 
 </body>
 </html>

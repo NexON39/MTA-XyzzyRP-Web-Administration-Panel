@@ -16,6 +16,4 @@ window.onload = function() {
         leftpanel.style.display = "flex";
         leftpanel_mobile.classList.toggle("active");
     }
-
-    AOS.init();
 }
