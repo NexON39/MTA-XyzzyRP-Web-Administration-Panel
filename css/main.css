@@ -66,12 +66,12 @@ a {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
     width: 300px;
     background: var(--purple);
     animation: animka 0.5s;
     display: none;
     z-index: 81;
+    height: 100%;
 }
 
 .leftpanel .userlog {

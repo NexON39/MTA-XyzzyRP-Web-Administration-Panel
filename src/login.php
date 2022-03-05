@@ -1,9 +1,10 @@
 <?php
     session_start();
-    include_once("../config/db_conf.php");
+    require_once("../config/db_conf.php");
 
     if(!empty($_POST['login']) && !empty($_POST['pass']) && isset($_POST['login_btn'])) {
         $con = @new mysqli($db_host,$db_user,$db_pass,$db_name);
+        
         if($con->connect_errno==0) {
             $login = $_POST['login'];
             $pass = $_POST['pass'];

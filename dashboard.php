@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['logged'])) {
+    if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");
         exit();
     }
@@ -37,9 +37,9 @@
             </ul>
         </nav>
         <div class="userlog">
-            <div class="user">
+            <!-- <div class="user">
                 <img src="img/prof.png" alt="user avatar ">
-            </div>  
+            </div>   -->
             <div class="logout"><a href="src/logout.php"><i class="fas fa-sign-out-alt"></i></a></div>         
         </div>   
     </div>
@@ -72,7 +72,7 @@
         </nav>
         <div class="userlog">
             <div class="user">
-                <img src="img/prof.png" alt="user avatar">
+                <!-- <img src="img/prof.png" alt="user avatar"> -->
                 <p>
                     <?php
                         if(isset($_SESSION['user']))
