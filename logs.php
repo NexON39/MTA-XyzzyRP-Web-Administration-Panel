@@ -1,4 +1,5 @@
 <?php
+    require_once "autoloader/autoload.php";
     session_start();
     if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");
@@ -92,39 +93,17 @@
             </div>
             <!-- input -->
             <div class="inputs">
-                <form action="" method="post">
-                    <div><input type="text" placeholder="id/nick/opis/data"></div>
+                <form action="logs.php" method="post">
+                    <div><input type="text" placeholder="id/nick/opis/data" name="log_search" value=""></div>
                     <div><input type="submit" value="Sprawdź"></div>
                 </form>
             </div>
             <!-- playerstats -->
             <div class="inputs serverusers logs">
-                    <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nick</th>
-                            <th>Opis</th>
-                            <th>Data</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Straż pożarna</td>
-                            <td>Strażak</td>
-                            <td>231</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Straż pożarna</td>
-                            <td>Strażak</td>
-                            <td>231</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Straż pożarna</td>
-                            <td>Strażak</td>
-                            <td>231</td>
-                        </tr>
-                    </table>
+                <?php
+                    $logs = new logs;
+                    $logs->getlogs();
+                ?>
             </div>
         </div>
     </div>

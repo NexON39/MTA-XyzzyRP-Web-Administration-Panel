@@ -532,6 +532,15 @@ table th {
 }
 
 /* logs table */
+.inputs.serverusers.logs {
+    grid-template-columns: repeat(1,1fr);
+    gap: 0;
+}
+
+.inputs.serverusers.logs .nodata{
+    display: flex;
+    justify-self: center;
+}
 
 .inputs.serverusers.logs table tr {
     grid-template-columns: repeat(7,1fr);
