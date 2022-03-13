@@ -5,11 +5,11 @@
             if(!empty($_POST['log_search'])) {
                 $log_search = $_POST['log_search'];
                 $_log_search = mysqli_real_escape_string($this->connect(), $log_search);
-                $sql = "SELECT * FROM xyzzyrp_logs WHERE id 
-                LIKE '%$_log_search%' OR user 
-                LIKE '%$_log_search%' OR action 
-                LIKE '%$_log_search%' OR date 
-                LIKE '%$_log_search%';";
+                $sql = "SELECT * FROM xyzzyrp_logs WHERE
+                id LIKE '%$_log_search%' OR 
+                user LIKE '%$_log_search%' OR 
+                action LIKE '%$_log_search%' OR 
+                date LIKE '%$_log_search%';";
             } else 
                 $sql = "SELECT * FROM xyzzyrp_logs";
             
