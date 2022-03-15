@@ -41,6 +41,11 @@ a {
     opacity: 1;
     transition: opacity 0.6s;
     animation: slideInFromBottom 0.5s;
+    z-index: 99;
+}
+
+.alertbox.green {
+    background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(161,255,0,1) 100%);
 }
 
 .alertbox p {
@@ -543,7 +548,7 @@ table th {
 }
 
 .inputs.serverusers.logs table tr {
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(4,1fr);
     padding-bottom: 20px;
 }
 
@@ -551,9 +556,14 @@ table th {
     padding-bottom: 0;
 }
 
-.inputs.serverusers.logs table tr th:nth-of-type(3),
+/* .inputs.serverusers.logs table tr th:nth-of-type(3),
 .inputs.serverusers.logs table tr td:nth-of-type(3) {
     grid-column: 3 / span 4;
+} */
+
+/* panelusers */
+.inputs.serverusers.logs.panelusers table tr {
+    grid-template-columns: repeat(2,1fr);
 }
 
 /* logs table end */

@@ -1,4 +1,5 @@
 <?php
+    require_once "autoloader/autoload.php";
     session_start();
     if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");
@@ -21,6 +22,9 @@
     <link rel="stylesheet" href="css/responsives.css">
 </head>
 <body>
+    <?php
+        $panelusers = new panelusers;
+    ?>
     <!-- left side menu mobile -->
     <div class="leftpanel-mobile flex">
         <div class="logo">
@@ -92,53 +96,37 @@
             </div>
             <!-- input -->
             <div class="inputs panelusers">
-                    <form action="" method="post" id="form">
+                    <form action="src/adduser.php" method="post" id="form">
                         <div class="inputs_type">
-                            <div><input type="text" placeholder="Nick"></div>
-                            <div><input type="password" placeholder="Hasło"></div>
+                            <div><input type="text" placeholder="Nick" name="add_user_nick" required></div>
+                            <div><input type="password" placeholder="Hasło" name="add_user_pass" required></div>
                         </div>
-                        <div><input type="submit" value="Dodaj"></div>
+                        <div><input type="submit" value="Dodaj" name="add_user_btn"></div>
                     </form>        
-                <form action="" method="post">
-                    <div class="inputs_type">
-                        <div><input type="text" placeholder="Nick"></div>
-                    </div>
-                    <div><input type="submit" value="Usuń"></div>
-                </form>
+                    <form action="src/deleteuser.php" method="post">
+                        <div class="inputs_type">
+                            <div><input type="text" placeholder="Nick" name="delete_user_nick" required></div>
+                        </div>
+                        <div><input type="submit" value="Usuń" name="delete_user_btn"></div>
+                    </form>
             </div>
             <!-- playerstats -->
-            <div class="inputs serverusers logs">
-                    <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nick</th>
-                            <th>Opis</th>
-                            <th>Data</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Straż pożarna</td>
-                            <td>Strażak</td>
-                            <td>231</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Straż pożarna</td>
-                            <td>Strażak</td>
-                            <td>231</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Straż pożarna</td>
-                            <td>Strażak</td>
-                            <td>231</td>
-                        </tr>
-                    </table>
+            <div class="inputs serverusers logs panelusers">
+                <?php
+                    $panelusers->showusers();
+                ?>
             </div>
         </div>
     </div>
 
-    <script src="js/aos.js"></script>
+    <?php
+        if(isset($_SESSION['alert'])) {
+            echo $_SESSION['alert'];
+            unset($_SESSION['alert']);
+        }
+    ?>
+
+    <script src="js/alerts.js"></script>
     <script src="js/app.js"></script>
 
 </body>
