@@ -9,9 +9,10 @@
                 id LIKE '%$_log_search%' OR 
                 user LIKE '%$_log_search%' OR 
                 action LIKE '%$_log_search%' OR 
-                date LIKE '%$_log_search%';";
+                date LIKE '%$_log_search%' 
+                ORDER BY id DESC;";
             } else 
-                $sql = "SELECT * FROM xyzzyrp_logs";
+                $sql = "SELECT * FROM xyzzyrp_logs ORDER BY id DESC;";
             
             $res = $this->connect()->query($sql);
             if($res->num_rows>0) {

@@ -24,6 +24,7 @@
 
         // delete user
         public function deleteuser() {
+            $now = date("Y-m-d H:i:s");
             $user = $_POST['delete_user_nick'];
             $_user = mysqli_real_escape_string($this->connect(), $user);
             $sql = "SELECT * FROM xyzzyrp_users WHERE user='$_user'";
@@ -31,12 +32,15 @@
             if($res->num_rows>0) {
                 $sql = "DELETE FROM xyzzyrp_users WHERE user='$_user';";
                 $this->connect()->query($sql);
+                $sql = "INSERT INTO xyzzyrp_logs(id,user,action,date) VALUES ('NULL', '$_SESSION[user]', 'Usunął użytkownika $_user', '$now');";
+                $this->connect()->query($sql);
                 return true;
             } else
                 return false;
         }
 
         public function adduser() {
+            $now = date("Y-m-d H:i:s");
             $user = $_POST['add_user_nick'];
             $pass = $_POST['add_user_pass'];
             $_user = mysqli_real_escape_string($this->connect(), $user);
@@ -48,6 +52,8 @@
                 $_pass = mysqli_real_escape_string($this->connect(), $pass);
                 $_pass_hash = password_hash($_pass, PASSWORD_DEFAULT);
                 $sql = "INSERT INTO xyzzyrp_users (id,user,pass) VALUES (NULL,'$_user','$_pass_hash');";
+                $this->connect()->query($sql);
+                $sql = "INSERT INTO xyzzyrp_logs(id,user,action,date) VALUES ('NULL', '$_SESSION[user]', 'Dodał użytkownika $_user', '$now');";
                 $this->connect()->query($sql);
                 return true;
             }
