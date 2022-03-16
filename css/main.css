@@ -671,3 +671,44 @@ table th {
     font-size: 20px;
     text-align: center;
 }
+
+/* settings */
+.inputs.settings.darkmode {
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+.inputs.settings.darkmode input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.inputs.settings.darkmode .check {
+    position: relative;
+    display: block;
+    background: var(--purple);
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+    pointer-events: all;
+}
+
+.inputs.settings.darkmode .check::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 16px;
+    top: 2px;
+    left: 3px;
+    border-radius: 50%;
+    background: white;
+    transition: ease-in 0.25s;
+}
+
+.inputs.settings.darkmode input[type="checkbox"]:checked ~ .check::before{
+    transform: translateX(56px);
+}

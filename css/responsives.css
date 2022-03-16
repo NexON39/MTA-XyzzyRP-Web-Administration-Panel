@@ -130,6 +130,14 @@
     .inputs.panelusers form .inputs_type {
         flex-direction: column;
     }
+
+    .inputs.settings.darkmode {
+        flex-direction: column;
+    }
+
+    .inputs.settings .inputs_type{
+        flex-direction: column;
+    }
 }
 
 @media(max-height: 460px) {
