@@ -15,6 +15,14 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.darkmode {
+    background-color: gray;
+}
+
+.lightmode {
+    background-color: white;
+}
+
 ul {
     list-style: none;
 }

@@ -1,5 +1,4 @@
-window.onload = function() {
-    // alerts
+window.addEventListener('load', function() {
     var close = document.getElementsByClassName('closebtn');
     var i;
     for(i=0; i<close.length; i++) {
@@ -13,4 +12,4 @@ window.onload = function() {
             );
         }
     }
-}
+})

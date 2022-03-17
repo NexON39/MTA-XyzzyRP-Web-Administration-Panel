@@ -1,9 +1,8 @@
-window.onload = function() {
+window.addEventListener('load', function() {
     let btn_leftpanel = document.querySelector(".btn-leftpanel");
     let btn_leftpanel_mobile = document.querySelector(".btn-leftpanel-mobile");
     let leftpanel = document.querySelector(".leftpanel");
     let leftpanel_mobile = document.querySelector(".leftpanel-mobile");
-    let main = document.querySelector(".main");
 
     btn_leftpanel.onclick = function() {
         leftpanel.style.display = "none";
@@ -16,4 +15,4 @@ window.onload = function() {
         leftpanel.style.display = "flex";
         leftpanel_mobile.classList.toggle("active");
     }
-}
+})

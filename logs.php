@@ -1,10 +1,12 @@
 <?php
-    require_once "autoloader/autoload.php";
     session_start();
     if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");
         exit();
     }
+    require_once "autoloader/autoload.php";
+    $darkmode = new darkmode;
+    $setTheme = $darkmode->setTheme();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsives.css">
 </head>
-<body>
+<body class="<?php echo $setTheme[0];?>">
     <!-- left side menu mobile -->
     <div class="leftpanel-mobile flex">
         <div class="logo">
@@ -35,6 +37,7 @@
                 <li><a href="logs.php"><i class="fa fa-history"></i></a></li>
                 <li><a href="panelusers.php"><i class="fas fa-users"></i></a></li>
                 <li><a href="about.php"><i class="fas fa-info-circle"></i></a></li>
+                <li><a href="settings.php"><i class="fa-solid fa-gear"></i></a></li>
             </ul>
         </nav>
         <div class="userlog">
@@ -69,6 +72,7 @@
                 <!-- <li><a href="#"><i class="fas fa-user-plus"></i>Dodaj użytkownika</a></li>
                 <li><a href="#"><i class="fas fa-user-minus"></i>Usuń użytkownika</a></li> -->
                 <li><a href="about.php"><i class="fas fa-info-circle"></i>Informacje ogólne</a></li>
+                <li><a href="settings.php"><i class="fa-solid fa-gear"></i>Ustawienia</a></li>
             </ul>
         </nav>
         <div class="userlog">
