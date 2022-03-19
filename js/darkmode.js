@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
     var checkbtn = document.querySelector(".checkbox-btn");
     checkbtn.onclick = function() {
         if(checkbtn.checked == true) {
@@ -9,4 +9,4 @@ window.onload = function() {
         document.cookie = "theme=" + theme;
         window.location.reload();
     }
-}
+})
