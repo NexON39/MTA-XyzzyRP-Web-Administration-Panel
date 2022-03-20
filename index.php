@@ -2,6 +2,8 @@
     session_start();
     if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
         header("Location: dashboard.php");
+    require_once "autoloader/autoload.php";
+    $alert = new alerts;
 ?>
 
 <!DOCTYPE html>
@@ -38,15 +40,8 @@
     </div>
 
     <?php
-        if(isset($_SESSION['alert'])) {
-            echo $_SESSION['alert'];
-            unset($_SESSION['alert']);
-        }
+        $alert->showAlert();
     ?>
-    <!-- <div class="alertbox">
-        <p>Błędne dane logowania</p>
-        <div class="closebtn">&times;</div>
-    </div> -->
 
     <script src="js/aos.js"></script>
     <script src="js/alerts.js"></script>

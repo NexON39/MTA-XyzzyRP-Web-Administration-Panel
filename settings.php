@@ -8,6 +8,7 @@
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
+    $alert = new alerts;
 ?>
 
 <!DOCTYPE html>
@@ -63,10 +64,7 @@
     </div>
 
     <?php
-        if(isset($_SESSION['alert'])) {
-            echo $_SESSION['alert'];
-            unset($_SESSION['alert']);
-        }
+        $alert->showAlert();
     ?>
 
     <script src="js/alerts.js"></script>

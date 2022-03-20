@@ -2,13 +2,18 @@
     spl_autoload_register('autoload');
 
     function autoload($classname) {
-        $path = "includes/";
-        $ex = "_classes.php";
-        $full = $path . $classname . $ex;
+        $paths = array(
+            'includes/',
+            '../includes/'
+        );
+        $ex = '_class.php';
 
-        if(!file_exists($full))
-            return false;
-
-        require_once $full;
+        foreach($paths as $path) {
+            $full = $path.$classname.$ex;
+            if(file_exists($full)) {
+                require_once $full;
+                return;
+            }
+        }
     }
 ?>

@@ -8,6 +8,7 @@
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
+    $alert = new alerts;
 ?>
 
 <!DOCTYPE html>
@@ -98,30 +99,11 @@
             </div>
                 
         </div>
-        <!-- footer -->
-        <!-- <footer class="footer">
-            <div class="footer-text">
-                <p>kscode.pl</p>
-                <p>Copyright &copy; 2021</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Serwer</a></li>
-                    <li><a href="#">Użytkownicy serwera</a></li>
-                    <li><a href="#">Operacje</a></li>
-                    <li><a href="#">Logi</a></li>
-                    <li><a href="#">Użytkownicy panelu</a></li>
-                    <li><a href="#">Informacje ogólne</a></li>
-                </ul>
-            </nav>
-        </footer> -->
-        <?php
-        if(isset($_SESSION['alert'])) {
-            echo $_SESSION['alert'];
-            unset($_SESSION['alert']);
-        }
-    ?>
     </div>
+
+    <?php
+        $alert->showAlert();
+    ?>
 
     <script src="js/alerts.js"></script>
     <script src="js/aos.js"></script>

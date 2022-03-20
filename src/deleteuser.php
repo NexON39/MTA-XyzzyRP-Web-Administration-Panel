@@ -1,8 +1,6 @@
 <?php
-    require_once "../includes/dbconfig_classes.php";
-    require_once "../includes/dbconnect_classes.php";
-    require_once "../includes/panelusers_classes.php";
-    
+    require_once "../autoloader/autoload.php";
+
     session_start();
     if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");
