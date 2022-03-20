@@ -1,7 +1,7 @@
 const ctx = document.getElementById('stats_chart').getContext('2d');
 
 Chart.defaults.font.family = "'Ubuntu', sans-serif";
-Chart.defaults.font.size = 18;
+Chart.defaults.font.size = 19;
 Chart.defaults.borderColor = '#D0D0D0';
 
 const chart = new Chart(ctx, {
@@ -11,7 +11,7 @@ const chart = new Chart(ctx, {
         datasets: [{
             label: 'Aktywność graczy',
             data: ['12','24','45','200','50','100','2'],
-            borderColor: 'rgba(0,179,0,1)'
+            borderColor: '#282547'
         }]
     },
     options: {
@@ -35,7 +35,7 @@ const chart = new Chart(ctx, {
             },
             point: {
                 pointStyle: 'circle',
-                backgroundColor: 'rgba(255,191,0,1)',
+                backgroundColor: 'rgba(255,66,66,1)',
                 hitRadius: 100,
                 hoverRadius: 10,
                 hoverBorderWidth: 2
@@ -49,7 +49,7 @@ const chart = new Chart(ctx, {
             },
             y: {
                 ticks: {
-                    color: 'rgba(0,179,0,1)'
+                    color: '#282547'
                 }
             }
         }

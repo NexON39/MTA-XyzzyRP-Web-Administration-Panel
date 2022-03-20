@@ -3,6 +3,11 @@
 :root {
     --purple: #11101d;
     --red: rgba(255,66,66,1);
+    --darkmode: #565656;
+    --green: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(161,255,0,1) 100%);
+    --white: white;
+    --inputs-white: whitesmoke;
+    --card-purple: #282547;
 }
 
 * {
@@ -16,11 +21,11 @@ body {
 }
 
 .darkmode {
-    background-color: gray;
+    background-color: var(--darkmode);
 }
 
 .lightmode {
-    background-color: white;
+    background-color: var(--inputs-white);
 }
 
 ul {
@@ -53,7 +58,7 @@ a {
 }
 
 .alertbox.green {
-    background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(161,255,0,1) 100%);
+    background: var(--green);
 }
 
 .alertbox p {
@@ -94,7 +99,7 @@ a {
 }
 
 .leftpanel .navbar ul li a {
-    color: white;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-self: center;
@@ -123,7 +128,7 @@ a {
 .leftpanel .logo {
     background: rgba(255, 255, 255, 0.02);
     padding: 20px;
-    color: white;
+    color: var(--white);
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -156,12 +161,12 @@ a {
 }
 
 .leftpanel .userlog i{
-    color: white;
+    color: var(--white);
     font-size: 20px;
 }
 
 .leftpanel .userlog p{
-    color: white;
+    color: var(--white);
     font-size: 19px;
 }
 
@@ -191,7 +196,7 @@ a {
 }
 
 .leftpanel-mobile .navbar ul li a {
-    color: white;
+    color: var(--white);
 }
 
 .leftpanel-mobile .navbar ul li:hover {
@@ -216,7 +221,7 @@ a {
 .leftpanel-mobile .logo {
     background: rgba(255, 255, 255, 0.02);
     padding: 20px;
-    color: white;
+    color: var(--white);
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -240,7 +245,7 @@ a {
 }
 
 .leftpanel-mobile .userlog i{
-    color: white;
+    color: var(--white);
     font-size: 20px;
 }
 
@@ -291,7 +296,7 @@ a {
     grid-template-rows: repeat(2,1fr);
     margin: 2rem 0;
     gap: 30px;
-    background: white;
+    background: var(--white);
     padding: 4rem;
     border-radius: 30px;
     /* border: 1px solid var(--purple); */
@@ -299,22 +304,22 @@ a {
 }
 
 .stats .card:nth-child(1) {
-    background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(161,255,0,1) 100%);
+    background: var(--card-purple);
     justify-self: right;
 }
 
 .stats .card:nth-child(2) {
-    background: linear-gradient(90deg, rgba(255,66,66,1) 0%, rgba(255, 74, 74,1) 100%);
+    background: var(--card-purple);
     justify-self: left;
 }
 
 .stats .card:nth-child(3) {
-    background: linear-gradient(90deg, rgba(255,191,0,1) 0%, rgba(255,229,0,1) 100%);
+    background: var(--card-purple);
     justify-self: right;
 }
 
 .stats .card:nth-child(4) {
-    background: linear-gradient(90deg, rgba(112,112,112,1) 0%, rgba(186,186,186,1) 100%);
+    background: var(--card-purple);
     justify-self: left;
 }
 
@@ -327,6 +332,7 @@ a {
     border-radius: 20px;
     border: 1px solid black;
     overflow: hidden;
+    color: var(--white);
 }
 
 .stats .card p {
@@ -352,7 +358,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 30px;
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
     padding: 20px;
@@ -369,13 +375,13 @@ a {
     justify-content: space-evenly;
     align-items: center;
     background: var(--purple);
-    color: white;
+    color: var(--white);
     padding: 0.5rem 0;
 }
 
 .footer a {
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-size: 0.80rem;
 }
 
@@ -407,7 +413,7 @@ a {
     justify-content: center;
     flex-direction: column;
     margin: 2rem 0;
-    background: white;
+    background: var(--white);
     padding: 4rem;
     border-radius: 30px;
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
@@ -427,7 +433,7 @@ a {
     padding: 20px;
     width: 100%;
     transition: border 500ms;
-    background: white;
+    background: var(--white);
     z-index: 2;
 }
 
@@ -446,7 +452,7 @@ a {
     margin: 0.5rem;
     padding: 10px;
     transition: background 500ms, border-bottom 500ms;
-    background: whitesmoke;
+    background: var(--inputs-white);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     letter-spacing: 1px;
@@ -457,7 +463,7 @@ a {
     outline: none;
     border-bottom: 2px var(--red) solid;
     transition: background 500ms, border-bottom 500ms;
-    background: white;
+    background: var(--white);
 }
 
 .inputs input[type='submit'],
@@ -596,7 +602,7 @@ table th {
     border-radius: 20px;
     padding: 20px;
     transition: border 500ms;
-    background: white;
+    background: var(--white);
 }
 
 .inputs .playerstats:hover,
@@ -713,7 +719,7 @@ table th {
     top: 2px;
     left: 3px;
     border-radius: 50%;
-    background: white;
+    background: var(--white);
     transition: ease-in 0.25s;
 }
 
