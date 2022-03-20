@@ -140,6 +140,12 @@
     }
 }
 
+@media(max-width: 500px) {
+    .inputs.loginpanel {
+        width: 80%;
+    }
+}
+
 @media(max-height: 460px) {
     .leftpanel .logo h1{
         font-size: 20px;

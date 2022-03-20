@@ -13,7 +13,7 @@
     if(!empty($_POST['add_user_nick']) && !empty($_POST['add_user_pass']) && isset($_POST['add_user_btn'])) {
         if($panelusers->adduser()==true)
             $_SESSION['alert'] = "
-            <div class='alertbox'>
+            <div class='alertbox green'>
                 <p>Pomyślnie dodano użytkownika</p>
                 <div class='closebtn'>&times;</div>
             </div>";

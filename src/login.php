@@ -24,6 +24,11 @@
                             $_SESSION['user'] = $row['user'];
                             $con->query("INSERT INTO xyzzyrp_logs(`id`,`user`,`action`,`date`) VALUES ('NULL', '$_SESSION[user]', 'Zalogował się', '$now');");
                             header("Location: ../dashboard.php");
+                            $_SESSION['alert'] = "
+                            <div class='alertbox green'>
+                                <p>Pomyślnie zalogowano</p>
+                                <div class='closebtn'>&times;</div>
+                            </div>";
                             $res->free_result();
                             $con->close();
                         } else {

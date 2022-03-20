@@ -44,12 +44,12 @@
                         </div>
                         <div><input type="submit" value="Zmień nick" name="chg_user_btn"></div>
                     </form>        
-                    <form action="src/changepassword.php" method="post">
+                    <form action="src/chgpassword.php" method="post">
                         <div class="inputs_type">
-                            <div><input type="text" placeholder="Nick" name="delete_user_nick" required></div>
-                            <div><input type="text" placeholder="Nick" name="delete_user_nick" required></div>
+                            <div><input type="text" placeholder="Akutalne hasło" name="chg_user_oldpass" required></div>
+                            <div><input type="text" placeholder="Nowe hasło" name="chg_user_newpass" required></div>
                         </div>
-                        <div><input type="submit" value="Zmień hasło" name="delete_user_btn"></div>
+                        <div><input type="submit" value="Zmień hasło" name="chg_user_pass_btn"></div>
                     </form>
             </div>
             <div class="inputs settings darkmode">

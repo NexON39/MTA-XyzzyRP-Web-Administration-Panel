@@ -13,7 +13,7 @@
     if(!empty($_POST['delete_user_nick']) && isset($_POST['delete_user_btn'])) {
         if($panelusers->deleteuser()==true)
             $_SESSION['alert'] = "
-            <div class='alertbox'>
+            <div class='alertbox green'>
                 <p>Pomyślnie usunięto użytkownika</p>
                 <div class='closebtn'>&times;</div>
             </div>";

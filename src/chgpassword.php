@@ -10,17 +10,17 @@
     }
 
     $settings = new settings;
-    if(!empty($_POST['chg_user_nick']) && isset($_POST['chg_user_btn'])) {
-        if($settings->chgnickname()==true)
+    if(!empty($_POST['chg_user_oldpass']) && !empty($_POST['chg_user_newpass']) && isset($_POST['chg_user_pass_btn'])) {
+        if($settings->chgpassword()==true)
             $_SESSION['alert'] = "
             <div class='alertbox green'>
-                <p>Pomyślnie zmieniono nick użytkownika</p>
+                <p>Pomyślnie zmieniono hasło użytkownika</p>
                 <div class='closebtn'>&times;</div>
             </div>";
         else
             $_SESSION['alert'] = "
             <div class='alertbox'>
-                <p>Taki użytkownik juz istnieje lub wystąpił błąd</p>
+                <p>Aktualne hasło się nie zgadza lub wystąpił błąd</p>
                 <div class='closebtn'>&times;</div>
             </div>";
         header('Location: ../settings.php');
