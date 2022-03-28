@@ -9,6 +9,7 @@
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
     $alert = new alerts;
+    $server_info = new mtaconfig;
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +85,7 @@
                                 <p>IP: </p>
                             </div>
                             <div class="card-right">
-                                <p>23.32.51.223</p>
+                                <p><?php echo $server_info->server_ip;?></p>
                             </div>
                         </div>
                         <div class="card">
@@ -92,7 +93,7 @@
                                 <p>Port: </p>
                             </div>
                             <div class="card-right">
-                                <p>25531</p>
+                                <p><?php echo $server_info->server_port;?></p>
                             </div>
                         </div>      
                 </div>    

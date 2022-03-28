@@ -8,6 +8,7 @@
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
+    $alert = new alerts;
 ?>
 
 <!DOCTYPE html>
@@ -38,61 +39,65 @@
             </div>
             <!-- input -->
             <div class="inputs operations">
-                <form action="" method="post">
+                <form action="src/mtaoperations.php" method="post">
                     <div class="inputs_type">
                         <div><input type="text" placeholder="UID" name="ban_uid"></div>
                         <div><input type="text" placeholder="Czas" name="ban_time"></div>
                         <div><input type="text" placeholder="(m/h/d)" name="ban_unit"></div>
                         <div><input type="text" placeholder="Powód" name="ban_reason"></div>   
                     </div>
-                    <div><input type="submit" value="Ban"></div>
+                    <div><input type="submit" value="Ban" name="ban_btn"></div>
                 </form>
-                <form action="" method="post">
+                <form action="src/mtaoperations.php" method="post">
                     <div class="inputs_type">
                         <div><input type="text" placeholder="UID" name="kick_uid"></div>
                         <div><input type="text" placeholder="Powód" name="kick_reason"></div>
                     </div>
-                    <div><input type="submit" value="Kick"></div>
+                    <div><input type="submit" value="Kick" name="kick_btn"></div>
                 </form>
-                <form action="" method="post">
+                <form action="src/mtaoperations.php" method="post">
                     <div class="inputs_type">
                         <div><input type="text" placeholder="UID" name="aj_uid"></div>
                         <div><input type="text" placeholder="Czas(m)" name="aj_time"></div>
-                        <div><input type="text" placeholder="Powód" name="reason_reason"></div>
+                        <div><input type="text" placeholder="Powód" name="aj_reason"></div>
                     </div>
-                    <div><input type="submit" value="Jail"></div>
+                    <div><input type="submit" value="Jail" name="aj_btn"></div>
                 </form>
-                <form action="" method="post">
+                <form action="src/mtaoperations.php" method="post">
                     <div class="inputs_type">
                         <div><input type="text" placeholder="UID" name="booc_uid"></div>
-                        <div><input type="text" placeholder="Czas" name="ooc_time"></div>
-                        <div><input type="text" placeholder="(m/h/d)" name="ooc_unit"></div>
-                        <div><input type="text" placeholder="Powód" name="ooc_reason"></div>
+                        <div><input type="text" placeholder="Czas" name="booc_time"></div>
+                        <div><input type="text" placeholder="(m/h/d)" name="booc_unit"></div>
+                        <div><input type="text" placeholder="Powód" name="booc_reason"></div>
                     </div>
-                    <div><input type="submit" value="Blokada OOC"></div>
+                    <div><input type="submit" value="Blokada OOC" name="booc_btn"></div>
                 </form>
-                <form action="" method="post">
+                <form action="src/mtaoperations.php" method="post">
                     <div class="inputs_type">
                         <div><input type="text" placeholder="UID" name="gp_uid"></div>
                         <div><input type="text" placeholder="Powód" name="gp_reason"></div>
                         <div><input type="text" placeholder="Ilość" name="gp_count"></div>
                     </div>
-                    <div><input type="submit" value="Dodawanie GP"></div>
+                    <div><input type="submit" value="Dodawanie GP" name="gp_btn"></div>
                 </form>
-                <form action="" method="post">
+                <form action="src/mtaoperations.php" method="post">
                     <div class="inputs_type">
                         <div><input type="text" placeholder="UID" name="bpm_uid"></div>
                         <div><input type="text" placeholder="Czas" name="bpm_time"></div>
                         <div><input type="text" placeholder="(m/h/d)" name="bpm_unit"></div>
                         <div><input type="text" placeholder="Powód" name="bpm_reason"></div>
                     </div>
-                    <div><input type="submit" value="Blokada PM"></div>
+                    <div><input type="submit" value="Blokada PM" name="bpm_btn"></div>
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="js/aos.js"></script>
+    <?php
+        $alert->showAlert();
+    ?>
+
+    <script src="js/alerts.js"></script>
     <script src="js/app.js"></script>
 
 </body>

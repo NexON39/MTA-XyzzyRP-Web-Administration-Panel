@@ -1,0 +1,60 @@
+{
+    "name": "multitheftauto/mtasa-php-sdk",
+    "description": "MTA SDK to interact with MTA's server.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "homepage": "https://mtasa.com/",
+    "support": {
+        "chat": "https://discord.gg/mtasa",
+        "forum": "https://forum.mtasa.com",
+        "wiki": "https://wiki.multitheftauto.com/wiki/PHP_SDK"
+    },
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "ext-json": "*",
+        "php-http/client-implementation": "^1.0",
+        "php-http/httplug": "^2.2",
+        "psr/http-factory": "^1.0"
+    },
+    "require-dev": {
+        "composer/package-versions-deprecated": "1.11.99.1",
+        "friendsofphp/php-cs-fixer": "^2.18",
+        "guzzlehttp/psr7": "^1.8",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "infection/infection": "^0.11.5",
+        "php-http/mock-client": "^1.1",
+        "phpspec/prophecy": "~1.13",
+        "phpstan/phpstan": "^0.12",
+        "phpunit/phpunit": "^8"
+    },
+    "config": {
+        "platform": {
+            "php": "7.3"
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "MultiTheftAuto\\Sdk\\": "src/"
+        }
+    },
+    "scripts": {
+        "infection": "infection",
+        "lint": "php-cs-fixer fix --verbose --show-progress=estimating",
+        "lint:check": [
+            "php-cs-fixer fix --dry-run --verbose --show-progress=estimating"
+        ],
+        "phpunit": "phpunit tests",
+        "phpstan": "phpstan analyse",
+        "test": [
+            "@lint:check",
+            "@phpunit",
+            "@phpstan"
+        ]
+    }
+}
