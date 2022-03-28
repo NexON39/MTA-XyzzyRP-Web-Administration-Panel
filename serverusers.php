@@ -121,15 +121,11 @@
                         </div>
                         <div class="stat">
                             <p>Prawa jazdy: </p>
-                            <p>A B C U</p>
+                            <p>A B L</p>
                         </div>
                         <div class="stat">
                             <p>Opis postaci: </p>
                             <p>super</p>
-                        </div>
-                        <div class="stat">
-                            <p>Niespłacone mandayu: </p>
-                            <p>100$</p>
                         </div>
                 </div>
                 <div class="playerstats">
@@ -141,15 +137,7 @@
                         <p>00-00-0000 00:00:00</p>
                     </div>
                     <div class="stat">
-                        <p>Blokada raportowania: </p>
-                        <p>00-00-0000 00:00:00</p>
-                    </div>
-                    <div class="stat">
                         <p>Blokada bicia: </p>
-                        <p>00-00-0000 00:00:00</p>
-                    </div>
-                    <div class="stat">
-                        <p>Blokada tagowania: </p>
                         <p>00-00-0000 00:00:00</p>
                     </div>
                     <div class="stat">
@@ -157,19 +145,11 @@
                         <p>00-00-0000 00:00:00</p>
                     </div>
                     <div class="stat">
-                        <p>Blokada jazdy: </p>
-                        <p>00-00-0000 00:00:00</p>
-                    </div>
-                    <div class="stat">
-                        <p>Admin jail: </p>
-                        <p>brak</p>
-                    </div>
-                    <div class="stat">
                         <p>Więzienie: </p>
                         <p>brak</p>
                     </div>
                 </div>
-                <div class="playerstats">
+                <!-- <div class="playerstats">
                     <div>
                         <h2>Punkty karne</h2>
                     </div>
@@ -193,7 +173,7 @@
                         <p>Kat L: </p>
                         <p>2</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- fractions -->
                     <table>
                         <tr>

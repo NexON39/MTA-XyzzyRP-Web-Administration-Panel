@@ -89,6 +89,15 @@
                     </div>
                     <div><input type="submit" value="Blokada PM" name="bpm_btn"></div>
                 </form>
+                <form action="src/mtaoperations.php" method="post">
+                    <div class="inputs_type">
+                        <div><input type="text" placeholder="UID" name="bbeat_uid"></div>
+                        <div><input type="text" placeholder="Czas" name="bbeat_time"></div>
+                        <div><input type="text" placeholder="(m/h/d)" name="bbeat_unit"></div>
+                        <div><input type="text" placeholder="Powód" name="bbeat_reason"></div>
+                    </div>
+                    <div><input type="submit" value="Blokada bicia" name="bbeat_btn"></div>
+                </form>
             </div>
         </div>
     </div>

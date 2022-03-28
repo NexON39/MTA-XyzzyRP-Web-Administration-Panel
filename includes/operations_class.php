@@ -37,7 +37,7 @@
             $aj_time = $_POST['aj_time'];
             $aj_reason = $_POST['aj_reason'];
 
-            $response = $this->mtaconnect()->getResource('');
+            $response = $this->mtaconnect()->getResource('siema')->call('xyzzyrp_ap_aj',$aj_uid,$aj_time,$aj_reason);
             return $response;
         }
 
@@ -47,7 +47,7 @@
             $booc_unit = $_POST['booc_unit'];
             $booc_reason = $_POST['booc_reason'];
 
-            $response = $this->mtaconnect()->getResource('');
+            $response = $this->mtaconnect()->getResource('siema')->call('xyzzyrp_ap_booc',$booc_uid,$booc_time,$booc_unit,$_SESSION['user'],$booc_reason);
             return $response;
         }
         
@@ -56,7 +56,7 @@
             $gp_reason = $_POST['gp_reason'];
             $gp_count = $_POST['gp_count'];
 
-            $response = $this->mtaconnect()->getResource('');
+            $response = $this->mtaconnect()->getResource('siema')->call('xyzzyrp_ap_addgp',$gp_uid,$gp_count,$gp_reason);
             return $response;
         }
 
@@ -66,7 +66,17 @@
             $bpm_unit = $_POST['bpm_unit'];
             $bpm_reason = $_POST['bpm_reason'];
 
-            $response = $this->mtaconnect()->getResource('');
+            $response = $this->mtaconnect()->getResource('siema')->call('xyzzyrp_ap_blockpm',$bpm_uid,$bpm_time,$bpm_unit,$_SESSION['user'],$bpm_reason);
+            return $response;
+        }
+
+        public function blockbeat() {
+            $bbeat_uid = $_POST['bbeat_uid'];
+            $bbeat_time = $_POST['bbeat_time'];
+            $bbeat_unit = $_POST['bbeat_unit'];
+            $bbeat_reason = $_POST['bbeat_reason'];
+
+            $response = $this->mtaconnect()->getResource('siema')->call('xyzzyrp_ap_blockbeat',$bbeat_uid,$bbeat_time,$bbeat_unit,$_SESSION['user'],$bbeat_reason);
             return $response;
         }
     }
