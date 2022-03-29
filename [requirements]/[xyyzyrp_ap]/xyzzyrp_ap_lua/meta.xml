@@ -1,0 +1,11 @@
+<meta>
+    <script src="s.lua" type="server"/>
+	<export function="xyzzyrp_ap_ban" http="true" />
+	<export function="xyzzyrp_ap_kick" http="true" />
+	<export function="xyzzyrp_ap_aj" http="true" />
+	<export function="xyzzyrp_ap_booc" http="true" />
+	<export function="xyzzyrp_ap_addgp" http="true" />
+	<export function="xyzzyrp_ap_blockpm" http="true" />
+	<export function="xyzzyrp_ap_blockbeat" http="true" />
+	<export function="xyzzyrp_ap_premiumskin" http="true" />
+</meta>
