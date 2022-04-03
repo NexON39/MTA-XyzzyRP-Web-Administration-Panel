@@ -183,27 +183,6 @@
                         echo "<td>1</td>";
                     echo "</tr>";
                 echo "</table>";
-
-                echo "<table>";
-                    echo "<tr>";
-                        echo "<th>Nazwa</th>";
-                        echo "<th>Opis</th>";
-                        echo "<th>Ilość</th>";
-                        echo "<th>Data</th>";
-                    echo "</tr>";
-                    echo "<tr>";
-                        echo "<td>Lorem, ipsum.</td>";
-                        echo "<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quidem totam corporis tempore, ipsam molestiae eius aspernatur accusamus impedit voluptatum!</td>";
-                        echo "<td>90</td>";
-                        echo "<td>23-11-2002</td>";
-                    echo "</tr>";
-                    echo "<tr>";
-                        echo "<td>Lorem, ipsum.</td>";
-                        echo "<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quidem totam corporis tempore, ipsam molestiae eius aspernatur accusamus impedit voluptatum!</td>";
-                        echo "<td>90</td>";
-                        echo "<td>23-11-2002</td>";
-                    echo "</tr>";
-                echo "</table>";
             } else
                 echo "<div class='nodata'>Brak danych do wyświetlenia</div>";
         }

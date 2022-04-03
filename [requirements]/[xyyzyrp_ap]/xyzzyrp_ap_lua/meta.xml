@@ -8,4 +8,5 @@
 	<export function="xyzzyrp_ap_blockpm" http="true" />
 	<export function="xyzzyrp_ap_blockbeat" http="true" />
 	<export function="xyzzyrp_ap_premiumskin" http="true" />
+	<export function="xyzzyrp_ap_dashboardata" http="true" />
 </meta>

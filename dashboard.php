@@ -5,11 +5,14 @@
         exit();
     }
     require_once "autoloader/autoload.php";
+
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
     $alert = new alerts;
-    $server_info = new mtaconfig;
+    $dashboarddata = new dashboard;
+    $mtaconf = new mtaconfig;
+    $data = $dashboarddata->getData();
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +48,7 @@
                         <p>Osoby online: </p>
                     </div>
                     <div class="card-right">
-                        <p>80</p>
+                        <p><?php echo $data[1] ?></p>
                     </div>
                 </div>
                 <div class="card">
@@ -53,7 +56,7 @@
                         <p>Sloty serwera: </p>
                     </div>
                     <div class="card-right">
-                        <p>512</p>
+                        <p><?php echo $data[0] ?></p>
                     </div>
                 </div>  
                 <div class="card">
@@ -61,7 +64,7 @@
                         <p>Zarejestrowani: </p>
                     </div>
                     <div class="card-right">
-                        <p>53000</p>
+                        <p><?php echo $data[2] ?></p>
                     </div>
                 </div>  
                 <div class="card">
@@ -85,7 +88,7 @@
                                 <p>IP: </p>
                             </div>
                             <div class="card-right">
-                                <p><?php echo $server_info->server_ip;?></p>
+                                <p><?php echo $mtaconf->server_ip ?></p>
                             </div>
                         </div>
                         <div class="card">
@@ -93,7 +96,7 @@
                                 <p>Port: </p>
                             </div>
                             <div class="card-right">
-                                <p><?php echo $server_info->server_port;?></p>
+                                <p><?php echo $data[4] ?></p>
                             </div>
                         </div>      
                 </div>    

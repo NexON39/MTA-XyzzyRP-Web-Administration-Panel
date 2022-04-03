@@ -180,3 +180,17 @@ function xyzzyrp_ap_premiumskin(arg1, arg2, arg3)
         return false
     end
 end
+
+function xyzzyrp_ap_dashboardata()
+    local slots = getServerConfigSetting("maxplayers") or 0
+    local Players_Online = getPlayerCount() or 0
+    local registered = exports.DB2:pobierzWyniki("SELECT id FROM lss_users ORDER BY id DESC LIMIT 1")
+    local IP = getServerConfigSetting ("serverip") or "BŁĄD!"
+    local port = getServerPort()
+    if registered and registered['id'] then 
+        registered = registered['id']
+    else
+        registered = 'Błąd DB2'
+    end
+    return slots, Players_Online, registered, IP, port
+end

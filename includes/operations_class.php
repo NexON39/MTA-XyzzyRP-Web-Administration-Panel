@@ -87,5 +87,10 @@
             $response = $this->mtaconnect()->getResource('xyzzyrp_ap_lua')->call('xyzzyrp_ap_premiumskin',$premiumskin_uid,$premiumskin_skinid,$_SESSION['user']);
             return $response;
         }
+
+        public function dashboardata() {
+            $response = $this->mtaconnect()->getResource('xyzzyrp_ap_lua')->call('xyzzyrp_ap_dashboardata');
+            return $response;
+        }
     }
 ?>
