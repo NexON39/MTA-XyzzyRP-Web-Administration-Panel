@@ -29,7 +29,6 @@
         $leftpanel->showLeftMobilePanel();
         $leftpanel->showLeftPanel();
     ?>
-    
     <!-- main -->
     <div class="main">
         <div class="container">

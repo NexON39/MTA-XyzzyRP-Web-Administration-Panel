@@ -19,4 +19,13 @@
             return $response;
         }
     }
+
+    class dashboard_db extends dbconnect {
+        public function getPanelUsers() {
+            $q = "SELECT COUNT(*) AS users FROM xyzzyrp_users;";
+            if($res = $this->connect()->query($q))
+                $row = $res->fetch_array();
+            return $row;
+        }
+    }
 ?>

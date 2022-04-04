@@ -11,8 +11,10 @@
     $leftpanel = new leftpanel;
     $alert = new alerts;
     $dashboarddata = new dashboard;
+    $dashboardex = new dashboard_db;
     $mtaconf = new mtaconfig;
     $data = $dashboarddata->getData();
+    $datadb = $dashboardex->getPanelUsers();
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +74,7 @@
                         <p>Użytkownicy panelu: </p>
                     </div>
                     <div class="card-right">
-                        <p>5</p>
+                        <p><?php echo $datadb[0]; ?></p>
                     </div>
                 </div>     
             </div>
