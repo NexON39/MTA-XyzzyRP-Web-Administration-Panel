@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsives.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body class="<?php echo $setTheme[0];?>">
     <?php

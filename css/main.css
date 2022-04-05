@@ -40,6 +40,12 @@ a {
     text-align: center;
 }
 
+.text-header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .alertbox {
     position: fixed;
     right: 25px;
@@ -297,7 +303,7 @@ a {
     margin: 2rem 0;
     gap: 30px;
     background: var(--white);
-    padding: 4rem;
+    padding: 3rem;
     border-radius: 30px;
     /* border: 1px solid var(--purple); */
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
@@ -402,9 +408,10 @@ a {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 50%;
-    gap: 40px;
+    gap: 2rem;
     transition: all 0.5s;
     animation: 500ms ease 0s 1 slideInFromTopLoginPanel;
+    padding: 2rem;
 }
 
 .inputs {
@@ -414,7 +421,7 @@ a {
     flex-direction: column;
     margin: 2rem 0;
     background: var(--white);
-    padding: 4rem;
+    padding: 3rem;
     border-radius: 30px;
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
     gap: 20px;
@@ -726,3 +733,20 @@ table th {
 .inputs.settings.darkmode input[type="checkbox"]:checked ~ .check::before{
     transform: translateX(56px);
 }
+
+/* custom scroll */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--white); 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--card-purple);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #383463; 
+  }

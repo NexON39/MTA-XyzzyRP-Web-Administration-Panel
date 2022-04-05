@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsives.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
     <!-- main -->
@@ -26,8 +27,8 @@
         <div class="container">
             <!-- input -->
             <div class="inputs loginpanel">
-                <div class="text-header">
-                    <h1>XyzzyRP Administration Panel</h1>
+                <div class="text-header-logo">
+                    <img src="img/logo.png" alt="">
                 </div>
                 <form action="src/login.php" method="post">
                     <div><input type="text" placeholder="Nick" name="login"></div>
