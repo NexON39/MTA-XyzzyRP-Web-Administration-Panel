@@ -15,6 +15,11 @@
                     $array = array($theme, $checkedbox);
                 }
                 return $array;
+            } else {
+                $theme = 'lightmode';
+                $checkedbox = '';
+                $array = array($theme, $checkedbox);
+                return $array;
             }
         }
     }
