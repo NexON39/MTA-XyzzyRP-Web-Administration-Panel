@@ -11,7 +11,12 @@
                 action LIKE '%$_log_search%' OR 
                 date LIKE '%$_log_search%' 
                 ORDER BY id DESC;";
-            } else 
+            }
+            elseif(!empty($_POST['date_up']))
+                $sql = "SELECT * FROM `xyzzyrp_logs` ORDER BY date ASC";
+            elseif(!empty($_POST['date_down']))
+                $sql = "SELECT * FROM `xyzzyrp_logs` ORDER BY date DESC";
+            else 
                 $sql = "SELECT * FROM xyzzyrp_logs ORDER BY id DESC;";
             
             $res = $this->connect()->query($sql);

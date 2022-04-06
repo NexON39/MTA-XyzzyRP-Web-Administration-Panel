@@ -444,6 +444,27 @@ a {
     z-index: 2;
 }
 
+/* sort */
+
+.inputs .sort_btn {
+    width: 100%;
+    padding: 0 0 1rem 0;
+}
+
+.inputs .sort_btn form {
+    flex-direction: row;
+    border: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.inputs .sort_btn form:focus-within {
+    border: 0;
+    transition: 0;
+}
+
+/* sort end */
+
 .inputs .inputs_type {
     display: flex;
     align-items: center;
@@ -483,7 +504,7 @@ a {
     border: 1px solid var(--red);
     border-radius: 20px;
     transition: transform 200ms;
-    box-shadow: 0px 5px 17px -3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 1);
     text-align: center;
 }
 
@@ -560,6 +581,7 @@ table th {
 .inputs.serverusers.logs {
     grid-template-columns: repeat(1,1fr);
     gap: 0;
+    padding: 1rem 3rem 3rem 3rem;
 }
 
 .inputs.serverusers.logs .nodata{
