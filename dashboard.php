@@ -15,6 +15,9 @@
     $mtaconf = new mtaconfig;
     $data = $dashboarddata->getData();
     $datadb = $dashboardex->getPanelUsers();
+    $chartdata = new chart;
+    $chart_data = $chartdata->getChartData();
+    $json_chart_data = json_encode($chart_data);
 ?>
 
 <!DOCTYPE html>
@@ -112,6 +115,10 @@
         $alert->showAlert();
     ?>
 
+    <script>
+        var jsonData = JSON.parse('<?= $json_chart_data ?>');
+        // console.log(jsonData);
+    </script>
     <script src="js/alerts.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/charts.min.js"></script>

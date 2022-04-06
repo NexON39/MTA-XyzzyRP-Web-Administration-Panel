@@ -7,10 +7,10 @@ Chart.defaults.borderColor = '#D0D0D0';
 const chart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['06.03.2022','07.03.2022','08.03.2022','09.03.2022','10.03.2022','11.03.2022','12.03.2022','13.03.2022','14.03.2022','15.03.2022','16.03.2022','17.03.2022','18.03.2022','19.03.2022'],
+        labels: [jsonData[0]['date'],jsonData[1]['date'],jsonData[2]['date'],jsonData[3]['date'],jsonData[4]['date'],jsonData[5]['date'],jsonData[6]['date'],jsonData[7]['date'],jsonData[8]['date'],jsonData[9]['date'],jsonData[10]['date'],jsonData[11]['date'],jsonData[12]['date'],jsonData[13]['date']],
         datasets: [{
             label: 'Aktywność graczy',
-            data: ['12','24','45','200','50','100','2','152','23','5','90','72','45','110'],
+            data: [jsonData[0]['players'],jsonData[1]['players'],jsonData[2]['players'],jsonData[3]['players'],jsonData[4]['players'],jsonData[5]['players'],jsonData[6]['players'],jsonData[7]['players'],jsonData[8]['players'],jsonData[9]['players'],jsonData[10]['players'],jsonData[11]['players'],jsonData[12]['players'],jsonData[13]['players']],
             borderColor: '#282547'
         }]
     },
