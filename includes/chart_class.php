@@ -18,7 +18,7 @@
                             while($row = $res->fetch_assoc()) {
                                 $data[] = $row;
                             }
-                            return $data;
+                            return json_encode($data);
                         }      
                     }
                 }  
@@ -35,7 +35,7 @@
                     while($row = $res->fetch_assoc()) {
                         $data[] = $row;
                     }
-                    return $data;
+                    return json_encode($data);
                 }    
             }
         }

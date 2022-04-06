@@ -21,7 +21,7 @@ const chart = new Chart(ctx, {
             },
             title: {
                 display: true,
-                text: 'Aktywność graczy z ostatnich 14 dni',
+                text: 'Aktywność graczy z ostatnich 14 dni (dane odświeżane codziennie o godzinie 00:00)',
                 color: 'black',
                 align: 'center'
             },

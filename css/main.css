@@ -304,7 +304,7 @@ a {
     gap: 30px;
     background: var(--white);
     padding: 3rem;
-    border-radius: 30px;
+    border-radius: 10px;
     /* border: 1px solid var(--purple); */
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
 }
@@ -365,7 +365,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: var(--white);
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
     padding: 20px;
 }
@@ -422,7 +422,7 @@ a {
     margin: 2rem 0;
     background: var(--white);
     padding: 3rem;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0px 5px 27px -3px rgba(0, 0, 0, 1);
     gap: 20px;
     z-index: 1;

@@ -17,7 +17,6 @@
     $datadb = $dashboardex->getPanelUsers();
     $chartdata = new chart;
     $chart_data = $chartdata->getChartData();
-    $json_chart_data = json_encode($chart_data);
 ?>
 
 <!DOCTYPE html>
@@ -116,8 +115,7 @@
     ?>
 
     <script>
-        var jsonData = JSON.parse('<?= $json_chart_data ?>');
-        // console.log(jsonData);
+        var jsonData = JSON.parse('<?= $chart_data ?>');
     </script>
     <script src="js/alerts.js"></script>
     <script src="js/aos.js"></script>
