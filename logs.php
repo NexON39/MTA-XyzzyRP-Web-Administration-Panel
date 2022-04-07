@@ -8,6 +8,7 @@
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
+    $page = $_GET['page'];
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@
             </div>
             <!-- input -->
             <div class="inputs">
-                <form action="logs.php" method="post">
+                <form action="logs.php?page=<?php echo $page?>" method="post">
                     <div><input type="text" placeholder="id/nick/opis/data" name="log_search" value=""></div>
                     <div><input type="submit" value="Sprawdź"></div>
                 </form>
@@ -46,7 +47,7 @@
             <!-- playerstats -->
             <div class="inputs serverusers logs">
                 <div class="sort_btn">
-                    <form action="logs.php" method="post">
+                    <form action="logs.php?page=<?php echo $page?>" method="post">
                         <div><input type="submit" value="Data↑" name="date_up"></div>
                         <div><input type="submit" value="Data↓" name="date_down"></div>
                     </form>
@@ -61,10 +62,6 @@
 
     <script src="js/aos.js"></script>
     <script src="js/app.js"></script>
-
-    <script>
-  AOS.init();
-</script>
 
 </body>
 </html>

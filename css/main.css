@@ -272,7 +272,8 @@ a {
     width: calc(100% - 50px);
     transition: all 0.5s;
     margin: 2rem 0;
-    animation: 500ms ease 0s 1 slideInFromTop;
+    /* animation: 500ms ease 0s 1 slideInFromTop; */
+    animation: fadeIn 0.3s ease-in-out;
     z-index: 80;
 }
 
@@ -498,11 +499,11 @@ a {
 .inputs button {
     font-size: 1.1rem;
     margin: 1rem;
-    padding: 0.75rem 2rem;
+    padding: 0.50rem 2rem;
     border: none;
     letter-spacing: 1px;
     border: 1px solid var(--red);
-    border-radius: 20px;
+    border-radius: 5px;
     transition: transform 200ms;
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 1);
     text-align: center;
@@ -606,6 +607,10 @@ table th {
 /* panelusers */
 .inputs.serverusers.logs.panelusers table tr {
     grid-template-columns: repeat(2,1fr);
+}
+
+.inputs.serverusers.logs.panelusers {
+    padding: 3rem;
 }
 
 /* logs table end */

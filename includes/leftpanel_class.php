@@ -12,7 +12,7 @@
                             <li><a href='dashboard.php'><i class='fas fa-server'></i></a></li>
                             <li><a href='serverusers.php'><i class='fas fa-search'></i></a></li>
                             <li><a href='operations.php'><i class='fas fa-ban'></i></i></a></li>
-                            <li><a href='logs.php'><i class='fa fa-history'></i></a></li>
+                            <li><a href='logs.php?page=1'><i class='fa fa-history'></i></a></li>
                             <li><a href='panelusers.php'><i class='fas fa-users'></i></a></li>
                             <li><a href='about.php'><i class='fas fa-info-circle'></i></a></li>
                             <li><a href='settings.php'><i class='fa-solid fa-gear'></i></a></li>
@@ -37,7 +37,7 @@
                             <li><a href='dashboard.php'><i class='fas fa-server'></i>Serwer</a></li>
                             <li><a href='serverusers.php'><i class='fas fa-search'></i>Użytkownicy serwera</a></li>
                             <li><a href='operations.php'><i class='fas fa-ban'></i>Operacje</a></li>
-                            <li><a href='logs.php'><i class='fa fa-history'></i>Logi</a></li>
+                            <li><a href='logs.php?page=1'><i class='fa fa-history'></i>Logi</a></li>
                             <li><a href='panelusers.php'><i class='fas fa-users'></i></i>Użytkownicy panelu</a></li>
                             <li><a href='about.php'><i class='fas fa-info-circle'></i>Informacje ogólne</a></li>
                             <li><a href='settings.php'><i class='fa-solid fa-gear'></i>Ustawienia</a></li>
