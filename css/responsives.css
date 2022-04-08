@@ -144,6 +144,10 @@
     .inputs.loginpanel {
         width: 80%;
     }
+
+    .inputs .sort_btn form {
+        flex-direction: column;
+    }
 }
 
 @media(max-height: 460px) {

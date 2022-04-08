@@ -50,9 +50,10 @@ a {
     position: fixed;
     right: 25px;
     bottom: 25px;
-    background: var(--red);
+    background: var(--card-purple);
     width: 300px;
     display: flex;
+    border: var(--purple) 2px solid;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -64,15 +65,17 @@ a {
 }
 
 .alertbox.green {
-    background: var(--green);
+    background: var(--card-purple);
 }
 
 .alertbox p {
     font-size: 15px;
+    color: white;
 }
 
 .alertbox .closebtn {
     font-size: 20px;
+    color: white;
 }
 
 .alertbox .closebtn:hover {
@@ -522,6 +525,11 @@ a {
     transition: border 500ms, background 500ms;
 }
 
+/* table general */
+tr:nth-child(2n) {
+    background: var(--inputs-white);
+}
+
 /* serverusers */
 .inputs.serverusers {
     display: flex;
@@ -582,12 +590,13 @@ table th {
 .inputs.serverusers.logs {
     grid-template-columns: repeat(1,1fr);
     gap: 0;
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 3rem 2rem 3rem;
 }
 
 .inputs.serverusers.logs .nodata{
     display: flex;
     justify-self: center;
+    padding: 1rem 0 0 0;
 }
 
 .inputs.serverusers.logs table tr {
@@ -597,6 +606,38 @@ table th {
 
 .inputs.serverusers.logs table tr:last-of-type {
     padding-bottom: 0;
+}
+
+.sortpages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem 0 0 0;
+}
+
+.sortpages .sortelement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--inputs-white);
+    border: var(--red) 1px solid;
+    width: 30px;
+    height: 30px;
+}
+
+.sortpages .sortelement a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple);
+    text-decoration: none;
+    text-align: center;
+}
+
+.sortpages .sortelement a:hover {
+    font-weight: bold;
 }
 
 /* .inputs.serverusers.logs table tr th:nth-of-type(3),

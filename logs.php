@@ -46,12 +46,6 @@
             </div>
             <!-- playerstats -->
             <div class="inputs serverusers logs">
-                <div class="sort_btn">
-                    <form action="logs.php?page=<?php echo $page?>" method="post">
-                        <div><input type="submit" value="Data↑" name="date_up"></div>
-                        <div><input type="submit" value="Data↓" name="date_down"></div>
-                    </form>
-                </div>
                 <?php
                     $logs = new logs;
                     $logs->getlogs();
