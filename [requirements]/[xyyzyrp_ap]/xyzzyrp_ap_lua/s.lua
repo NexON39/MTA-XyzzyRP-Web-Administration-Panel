@@ -41,7 +41,7 @@ function xyzzyrp_ap_aj(arg1, arg2, ...)
             local supportLogin = "Panel HTTP ()"
             local q=string.format("UPDATE lss_users SET blokada_aj=%d WHERE id=%d LIMIT 1", arg2, arg1)
             local czas = arg2
-            exports.DB:zapytanie(q)
+            exports.DB2:zapytanie(q)
             local character=getElementData(v,"character")
             outputChatBox("* " .. supportLogin .. " nałożył AJ (" .. czas .. " min) na: " .. getPlayerName(v) .. ", powod: " .. reason, v, 255,0,0,true)
             triggerClientEvent("showAnnouncement", root, supportLogin .. " nałożył AJ (" .. czas .. " min) na: " .. getPlayerName(v) .. ", powód: " .. reason, 15)
@@ -53,7 +53,7 @@ function xyzzyrp_ap_aj(arg1, arg2, ...)
             return true
         end
     end
-    if exports.DB:zapytanie(string.format("UPDATE lss_users SET blokada_aj=%d WHERE id=%d LIMIT 1", arg2, arg1)) then
+    if exports.DB2:zapytanie(string.format("UPDATE lss_users SET blokada_aj=%d WHERE id=%d LIMIT 1", arg2, arg1)) then
         return true
     else
         return false
@@ -194,3 +194,26 @@ function xyzzyrp_ap_dashboardata()
     end
     return slots, Players_Online, registered, IP, port
 end
+
+local maxPlayerToday = 0
+addEventHandler("onPlayerJoin", root, function()
+    if getPlayerCount() > maxPlayerToday then
+        maxPlayerToday = getPlayerCount()
+        if exports.DB2:pobierzWyniki("SELECT * FROM xyzzyrp_chart WHERE date = CURDATE()") then
+            exports.DB2:zapytanie("UPDATE xyzzyrp_chart SET players = "..maxPlayerToday.." WHERE date = CURDATE()")
+        else
+            exports.DB2:zapytanie("INSERT xyzzyrp_chart SET players = "..maxPlayerToday..", date = CURDATE()")
+        end
+    end
+end)
+setTimer(function()
+
+    if getRealTime().hour == 0 then
+        if exports.DB2:pobierzWyniki("SELECT * FROM xyzzyrp_chart WHERE date = CURDATE()") then
+            -- 
+        else
+            exports.DB2:zapytanie("INSERT xyzzyrp_chart SET players = "..getPlayerCount()..", date = CURDATE()")
+            maxPlayerToday = getPlayerCount()
+        end
+    end
+end, 1000 * 60 * 60, 0)
