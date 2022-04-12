@@ -1,3 +1,6 @@
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
 window.addEventListener('load', function() {
     let btn_leftpanel = document.querySelector(".btn-leftpanel");
     let btn_leftpanel_mobile = document.querySelector(".btn-leftpanel-mobile");

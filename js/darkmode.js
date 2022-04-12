@@ -1,3 +1,6 @@
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
 window.addEventListener('load', function() {
     var checkbtn = document.querySelector(".checkbox-btn");
     checkbtn.onclick = function() {

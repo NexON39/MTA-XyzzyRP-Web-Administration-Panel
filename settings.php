@@ -1,10 +1,14 @@
 <?php
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
     session_start();
     if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");
         exit();
     }
     require_once "autoloader/autoload.php";
+    
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;
@@ -48,8 +52,8 @@
                     </form>        
                     <form action="src/chgpassword.php" method="post">
                         <div class="inputs_type">
-                            <div><input type="text" placeholder="Akutalne hasło" name="chg_user_oldpass" required></div>
-                            <div><input type="text" placeholder="Nowe hasło" name="chg_user_newpass" required></div>
+                            <div><input type="password" placeholder="Akutalne hasło" name="chg_user_oldpass" required></div>
+                            <div><input type="password" placeholder="Nowe hasło" name="chg_user_newpass" required></div>
                         </div>
                         <div><input type="submit" value="Zmień hasło" name="chg_user_pass_btn"></div>
                     </form>

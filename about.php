@@ -5,6 +5,7 @@
         exit();
     }
     require_once "autoloader/autoload.php";
+    
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $leftpanel = new leftpanel;

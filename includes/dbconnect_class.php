@@ -1,4 +1,7 @@
 <?php
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
     class dbconnect extends dbconfig 
     {
         public function connect() {

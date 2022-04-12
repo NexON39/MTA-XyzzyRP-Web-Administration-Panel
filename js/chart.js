@@ -1,3 +1,6 @@
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
 const ctx = document.getElementById('stats_chart').getContext('2d');
 
 Chart.defaults.font.family = "'Ubuntu', sans-serif";

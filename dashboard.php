@@ -1,4 +1,7 @@
 <?php
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
     session_start();
     if(!isset($_SESSION['logged']) && $_SESSION['logged']!=true) {
         header("Location: index.php");

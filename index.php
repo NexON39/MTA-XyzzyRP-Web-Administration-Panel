@@ -1,8 +1,12 @@
 <?php
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
     session_start();
     if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
         header("Location: dashboard.php");
     require_once "autoloader/autoload.php";
+    
     $darkmode = new darkmode;
     $setTheme = $darkmode->setTheme();
     $alert = new alerts;

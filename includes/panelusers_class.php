@@ -1,4 +1,7 @@
-<?php  
+<?php
+    // XyzzyRP Administration Panel Project
+    // Author: NexON39
+    // Discord: NexON39#5665
     class panelusers extends dbconnect
     {
         // showusers
