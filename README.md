@@ -26,20 +26,20 @@ Internetowy panel administracyjny XyzzyRP został stworzony z myślą dla osób 
         <li>W pliku konfiguracyjnym ACL (acl.xml) w grupie 'Admin' dodajemy naszego użytkownika np. <code>&lt;object name="user.myUser"&gt;&lt;/object&gt;</code> oraz dodajemy obiekt naszego zasobu <code>&lt;object name="resource.xyzzyrp_ap_lua"&gt;&lt;/object&gt;</code></li>
         <li>Wgrywamy nasz panel administracyjny na serwer webowy</li>
         <li>Przechodzimy do pliku includes/dbconfig_class.php oraz konfigurujemy według podanego wzoru
-            <code><pre>
+            <code>
                 <br> public $dbhost = "dbhost"; //host mysql (domyślnie localhost/127.0.0.1)
                 <br> public $dbuser = "user"; //nazwa uzytkownika mysql (domyślnie root)
                 <br> public $dbpass = "pass"; //hasło użytkownika mysql (domyślnie brak hasła)
                 <br> public $dbname = "dbname"; //nazwa bazy danych
-            </pre></code>
+            </code>
         </li>
         <li>Przechodzimy do pliku includes/mtaconfig_class.php oraz konfigurujemy według podanego wzoru
-            <code><pre>
+            <code>
                 <br> public $server_ip = "serverip"; //ip serwera (domyślny 127.0.0.1)
                 <br> public $server_port = "serverport"; //port http serwera (domyślny 22005)
                 <br> public $acl_user = "myUser"; //nazwa uzytkownika acl panelu (np. xyzzyrp_ap)
                 <br> public $acl_pass = "myPassword"; //haslo uzytkownika acl panelu
-            </pre></code>
+            </code>
         </li>
         <li>Uruchamiamy zasób <code>xyzzyrp_ap_lua</code> na serwerze</li>
         <li>Wchodzimy na adres panelu i logujemy się (domyślny dodany użytkownik to login: admin, hasło: admin</li>
@@ -90,20 +90,20 @@ The XyzzyRP web administration panel was created for people who make a server fo
         <li>In the ACL configuration file (acl.xml) in the 'Admin' group, add our user, e.g. <code>&lt;object name="user.myUser"&gt;&lt;/object&gt;</code> and add the object of our resource <code>&lt;object name="resource.xyzzyrp_ap_lua"&gt;&lt;/object&gt;</code></li>
         <li>We upload our administration panel to the web server</li>
         <li>We go to the file includes/dbconfig_class.php and configure according to the given pattern
-            <code><pre>
+            <code>
                 <br> public $dbhost = "dbhost"; //host mysql (default localhost/127.0.0.1)
                 <br> public $dbuser = "user"; //username mysql (default root)
                 <br> public $dbpass = "pass"; //mysql user password (no password by default)
                 <br> public $dbname = "dbname"; //database name
-            </pre></code>
+            </code>
         </li>
         <li>We go to the file includes/mtaconfig_class.php and configure according to the given pattern
-            <code><pre>
+            <code>
                 <br> public $server_ip = "serverip"; // server ip (default 127.0.0.1)
                 <br> public $server_port = "serverport"; // the server's http port (default 22005)
                 <br> public $acl_user = "myUser"; // username acl of the panel (e.g. xyzzyrp_ap)
                 <br> public $acl_pass = "myPassword"; // password for the acl user of the panel
-            </pre></code>
+            </code>
         </li>
         <li> Run resource <code> xyzzyrp_ap_lua </code> on the server </li>
         <li> Enter the panel address and log in (default user added is login: admin, password: admin </li>
